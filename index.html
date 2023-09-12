@@ -46,6 +46,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	<link href="css/csvtable.css" rel="stylesheet"/>
 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -640,7 +641,7 @@
 		</div>
 		<div class="googleForm">
 			<p style="text-align: center;">
-				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlflImaIlsxjYoAPFa1mUCQRWj97mInXmmyOD0669TsUw8fg/viewform?embedded=true" width="90%" height="968" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlflImaIlsxjYoAPFa1mUCQRWj97mInXmmyOD0669TsUw8fg/viewform?embedded=true" width="90%" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 			</p>
 		</div>
 	</div>
@@ -661,6 +662,16 @@
 					<h3 style="font-family: 'Oswald', Arial, serif;">BNI</h3>
 					<h3 style="font-family: 'Oswald', Arial, serif;">657398707</h3>
 					<h4 style="font-family: 'Oswald', Arial, serif;">an. Nikhmatul Khoiriyah</h4>
+					<span style="color: #bf9b73">Berikut adalah pesan yang telah teman/bapak/ibu/saudara/saudari sampaikan :</span>
+					<!-- <div class="container">
+						<p style="text-align: center;">
+							<div id="tablebukutamu"></div>
+						</p>
+					</div> -->
+					<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTlY_oXI13BWoS_bBxQDweAZ-COC2e7Kz4AJtr3J83I9kqVMRjpj10nejhvTJSV0QL90yLKxesTesO0/pubhtml?gid=1138244021&amp;single=true&amp;widget=true&amp;headers=false" style="width: 100%;"></iframe>
+					<span style="color: #bf9b73">Terima kasih telah berpartisipasi dalam hidup kami.</span>
+					<br>
+					<span style="color: #bf9b73">*di-update bila sempat ☺</span>
 				</div>
 			</div>
 		</div>
@@ -729,7 +740,16 @@
 <script src="lib/lightgallery.js/dist/plugins/fullscreen/lg-fullscreen.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
 
+<!-- <script src="js/jquery-1.4.2.min.js"></script> -->
+<script src="js/jquery.csvToTable.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+
 <script>
+
+	$(function() {
+		$('#tablebukutamu').CSVToTable('csv/RSVP_Kehadiran_Nikah.csv');
+	  });
+
 	day = 24; month = 12-1; year = 2023;
 	hour = 9; minute = 0;
 	var d = new Date(year, month, day, hour, minute, 0, 0);
