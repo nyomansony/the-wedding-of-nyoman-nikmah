@@ -207,9 +207,9 @@
 					<div class="simply-countdown simply-countdown-wedding"></div>
 					<br>
 					<p>
-						<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akah+Nikah+Nyoman+dan+Nikmah&details=Bismillahirrahmanirrahim%0AKami+mengundang+Bapak%2FIbu%2FSaudara%2Fi+untuk+hadir+di+acara+pernikahan+kami.+InsyaAllah+akan+diadakan+di%0A%0AAkad+Nikah+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+09%3A00.%0AWalimatul+%27Ursy+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+11%3A00.&location=Balai+Desa+Bangsalan%2C+Dusun+II%2C+Bangsalan%2C+Kec.+Teras%2C+Kabupaten+Boyolali%2C+Jawa+Tengah+57372&dates=20231224T033000Z%2F20231224T050000Z" target="_blank" class="btn btn-primary btn-sm">Save the date</a><br>
+						<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akah+Nikah+Nyoman+dan+Nikmah&details=Bismillahirrahmanirrahim%0AKami+mengundang+Bapak%2FIbu%2FSaudara%2Fi+untuk+hadir+di+acara+pernikahan+kami.+InsyaAllah+akan+diadakan+di%0A%0AAkad+Nikah+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+07%3A00.%0AWalimatul+%27Ursy+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+09%3A00.&location=Balai+Desa+Bangsalan%2C+Dusun+II%2C+Bangsalan%2C+Kec.+Teras%2C+Kabupaten+Boyolali%2C+Jawa+Tengah+57372&dates=20231224T000000Z%2F20231224T040000Z" target="_blank" class="btn btn-primary btn-sm">Save the date</a><br>
 						<i style="font-size: 15px">*Klik tombol ini untuk menyimpan tanggal pada google kalender (PC website)<br>atau tap button berikut untuk mobile<br></i>
-						<a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akah+Nikah+Nyoman+dan+Nikmah&details=Bismillahirrahmanirrahim%0AKami+mengundang+Bapak%2FIbu%2FSaudara%2Fi+untuk+hadir+di+acara+pernikahan+kami.+InsyaAllah+akan+diadakan+di%0A%0AAkad+Nikah+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+09%3A00.%0AWalimatul+%27Ursy+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+11%3A00.&location=Balai+Desa+Bangsalan%2C+Dusun+II%2C+Bangsalan%2C+Kec.+Teras%2C+Kabupaten+Boyolali%2C+Jawa+Tengah+57372&dates=20231224T033000Z%2F20231224T050000Z"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
+						<a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akah+Nikah+Nyoman+dan+Nikmah&details=Bismillahirrahmanirrahim%0AKami+mengundang+Bapak%2FIbu%2FSaudara%2Fi+untuk+hadir+di+acara+pernikahan+kami.+InsyaAllah+akan+diadakan+di%0A%0AAkad+Nikah+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+07%3A00.%0AWalimatul+%27Ursy+%3A+Balai+Desa+Bangsalan%2C+24+Desember+2023+-+09%3A00.&location=Balai+Desa+Bangsalan%2C+Dusun+II%2C+Bangsalan%2C+Kec.+Teras%2C+Kabupaten+Boyolali%2C+Jawa+Tengah+57372&dates=20231224T000000Z%2F20231224T040000Z"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
 					</p>
 				</div>
 			</div>
@@ -289,7 +289,7 @@
 							<h3 style="font-family: 'Oswald', Arial, serif;">Akad Nikah</h3>
 							<div class="event-col">
 								<i class="icon-clock"></i>
-								<span>09:00</span>
+								<span>07:00</span>
 								<span>Selesai</span>
 							</div>
 							<div class="event-col">
@@ -308,7 +308,7 @@
 							<h3 style="font-family: 'Oswald', Arial, serif;">Walimatul 'Ursy</h3>
 							<div class="event-col">
 								<i class="icon-clock"></i>
-								<span>11:00</span>
+								<span>09:00</span>
 								<span>Selesai</span>
 							</div>
 							<div class="event-col">
@@ -747,20 +747,20 @@
 
 <script>
 
-	$(function() {
-		$('#tablebukutamu').CSVToTable('csv/RSVP_Kehadiran_Nikah.csv');
-	  });
+	//$(function() {
+	//	$('#tablebukutamu').CSVToTable('csv/RSVP_Kehadiran_Nikah.csv');
+	//  });
 
 	day = 24; month = 12-1; year = 2023;
-	hour = 9; minute = 0;
-	var d = new Date(year, month, day, hour, minute, 0, 0);
+	hour = 7; minute = 0;
+	//var d = new Date(year, month, day, hour, minute, 0, 0);
 
 	// default example
 	simplyCountdown('.simply-countdown-wedding', {
-		year: d.getFullYear(),
-		month: d.getMonth() + 1,
-		day: d.getDate(),
-		hour: d.getHours(),
+		year: 2023,
+		month: 12,
+		day: 24,
+		hour: 7,
 		minutes: 0, // Default is 0 [0-59] integer
 		seconds: 0, // Default is 0 [0-59] integer
 		countUp: true
