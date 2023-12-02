@@ -82,6 +82,10 @@
 </head>
 <body>
 
+<audio id="audioPlayer">
+	<source src="audio/marry-your-daughter.mp3" type="audio/mp3">
+</audio>
+
 <div class="fh5co-loader"></div>
 
 <!--<div class="container">-->
@@ -793,7 +797,8 @@
 
 	$('#open-invitation').click(function (){
 		$('#overlay').addClass('hide-overlay');
-		playAudio1();
+		document.getElementById("youtube-audio1").style.display = "block";
+		toggleAudio1()
 		/*yang bagian floating button ada animasinya tapi karena ketutup dulu sama overlay jadinya gak nampak*/
 		/*pengen pas di klik buka undangan baru jalan animasinya*/
 		/*var c = document.getElementsByClassName('right-sidebar');
@@ -822,50 +827,24 @@
 </script>
 
 <script>
-	// 2. This code loads the IFrame Player API code asynchronously.
-	var tag = document.createElement('script');
-
-	tag.src = "https://www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	// 3. This function creates an <iframe> (and YouTube player)
-	//    after the API code downloads.
-	var player1;
-	function onYouTubeIframeAPIReady() {
-
-		var ctrlq1 = document.getElementById("youtube-audio1");
-		ctrlq1.innerHTML = '<img id="youtube-icon1" src=""/><div id="youtube-player1"></div>';
-		ctrlq1.style.cssText = 'width:20px;margin:0 auto;cursor:pointer;cursor:hand;display:none';
-		ctrlq1.onclick = toggleAudio1;
-
-		player1 = new YT.Player('youtube-player1', {
-			height: '0',
-			width: '0',
-			videoId: ctrlq1.dataset.video,
-			playerVars: {
-				autoplay: ctrlq1.dataset.autoplay,
-				loop: ctrlq1.dataset.loop,
-			},
-			events: {
-				'onReady': onPlayerReady1,
-				'onStateChange': onPlayerStateChange1
-			}
-		});
-	}
+	var ctrlq1 = document.getElementById("youtube-audio1");
+	ctrlq1.innerHTML = '<img id="youtube-icon1" src=""/><div id="youtube-player1"></div>';
+	ctrlq1.style.cssText = 'width:20px;margin:0 auto;cursor:pointer;cursor:hand;display:none';
+	ctrlq1.onclick = toggleAudio1;
 
 	function togglePlayButton1(play) {
 		document.getElementById("youtube-icon1").src = play ? "images/audio/pause.png" : "images/audio/play.png";
 	}
 
 	function toggleAudio1() {
-		if ( player1.getPlayerState() == 1 || player1.getPlayerState() == 3 ) {
-			player1.pauseVideo();
-			togglePlayButton1(false);
-		} else {
-			player1.playVideo();
-			togglePlayButton1(true);
-		}
+		var audioPlayer = document.getElementById("audioPlayer");
+		if (audioPlayer.paused) {
+            audioPlayer.play();
+            togglePlayButton1(true);
+        } else {
+            audioPlayer.pause();
+            togglePlayButton1(false);
+        }
 	}
 
 	function playAudio1() {
